@@ -5,11 +5,12 @@ import com.alibaba.fastjson.JSON;
 import lombok.Data;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 @Data
 public class JSONSerializer implements ISerializer {
 
-    private Charset charset;
+    private Charset charset = StandardCharsets.UTF_8;
 
     @Override
     public byte[] serialize(Object object) {

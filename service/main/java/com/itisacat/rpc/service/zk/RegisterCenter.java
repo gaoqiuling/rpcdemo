@@ -30,7 +30,7 @@ public class RegisterCenter implements IRegisterCenter4Provider {
     //服务端ZK服务元信息,选择服务(第一次直接从ZK拉取,后续由ZK的监听机制主动更新)
     private static final Map<String, List<ProviderServiceRequest>> serviceMetaDataMap4Consume = Maps.newConcurrentMap();
 
-    private static String ZK_SERVICE = "127.0.0.1:2181";
+    private static String ZK_SERVICE = "110.40.153.24:2181";
     private static int ZK_SESSION_TIME_OUT = 6000;
     private static int ZK_CONNECTION_TIME_OUT = 6000;
     private static String ROOT_PATH = "/storm";
@@ -104,7 +104,6 @@ public class RegisterCenter implements IRegisterCenter4Provider {
                         refreshActivityService(activityServiceIpList);
                     }
                 });
-
             }
         }
     }

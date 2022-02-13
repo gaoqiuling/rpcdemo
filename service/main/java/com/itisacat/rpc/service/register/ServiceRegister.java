@@ -19,7 +19,6 @@ import java.util.Map;
 
 @Service
 public class ServiceRegister implements ApplicationContextAware {
-    private static Integer serverPort = 8081;
     private static Integer nettyPort = 9000;
     private static String appKey = "helloDemo";
     private List<Object> rpcServices;
@@ -37,7 +36,7 @@ public class ServiceRegister implements ApplicationContextAware {
         rpcServices.forEach(service -> {
             ProviderServiceRequest providerService = new ProviderServiceRequest();
             providerService.setServerIp(IpHelper.localIp());
-            providerService.setServerPort(serverPort);
+            providerService.setServerPort(nettyPort);
             providerService.setAppKey(appKey);
             providerService.setServiceObject(service);
             providerService.setServiceInterface(service.getClass().getInterfaces()[0]);

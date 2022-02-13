@@ -7,6 +7,8 @@
         <module>service</module>
         <module>service-api</module>
         <module>client</module>
+        <module>restservice</module>
+        <module>restclient</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
